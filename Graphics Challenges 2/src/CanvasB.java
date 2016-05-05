@@ -14,22 +14,21 @@ public class CanvasB extends Canvas
 			makeSquare();
 			CanvasB canvas = new CanvasB();
 		    JFrame frame = new JFrame();
-		    frame.setSize(1000, 1000);
+		    frame.setSize(500, 500);
 		    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		    frame.getContentPane().add(canvas).setBackground(Color.white);
 		    frame.setLocationRelativeTo(null); //Sets JPanel to center of screen 
 		    frame.setResizable(false);
-		    frame.setVisible(true);
-		    
+		    frame.setVisible(true);		    
 			}
 		
 		public static void makeSquare()
 		   {
 			Scanner userInput = new Scanner (System.in);
-			System.out.println("How tall you want the square. Must Be less than 1000.");
+			System.out.println("How tall you want the square. Must Be less than 500.");
 			sizeHeight = userInput.nextInt();
 			Scanner userInput3 = new Scanner (System.in);
-			System.out.println("How wide you want the square. Must Be less than 1000.");
+			System.out.println("How wide you want the square. Must Be less than 500.");
 			sizeWidth = userInput3.nextInt();
 			Scanner userInput2 = new Scanner (System.in);
 			System.out.println("Want it to be red or blue?");
@@ -37,8 +36,15 @@ public class CanvasB extends Canvas
 		   }
 		public void paint(Graphics graphics)
 		    {
-			graphics.setColor(Color.getColor(color));
-			graphics.fillRect(0, 0,sizeWidth,sizeHeight);
+		    if (color.equals("red"))
+		    	{
+		    	graphics.setColor(Color.red);
+		    	graphics.fillRect(0, 0,sizeWidth,sizeHeight);
+		    	}
+		    else if (color.equals("blue"))
+		    	{
+		    	graphics.setColor(Color.blue);
+		    	graphics.fillRect(0, 0,sizeWidth,sizeHeight);
+		    	}
 		    }
 	}
-
