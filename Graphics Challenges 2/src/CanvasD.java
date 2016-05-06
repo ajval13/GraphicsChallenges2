@@ -11,7 +11,7 @@ public class CanvasD extends Canvas
 			{
 				CanvasD canvas = new CanvasD();
 				JFrame frame = new JFrame();
-				frame.setSize(100, 100);
+				frame.setSize(200, 200);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.getContentPane().add(canvas).setBackground(Color.white);
 				frame.setLocationRelativeTo(null); //Sets JPanel to center of screen 
@@ -20,7 +20,18 @@ public class CanvasD extends Canvas
 			}
 		public void paint(Graphics graphics)
 			{
-			graphics.setColor(Color.black);
-			graphics.fillRect(0, 0, 20, 20);	
+			
+			for(int red = 0; red<=255; red= red++)
+				{
+				for (int green = 0; green<=255;green++)
+					{
+					for (int blue = 0; blue<=255;blue++)
+						{
+						graphics.setColor(new Color(red,green,blue));
+						graphics.fillRect(0, 0, 200, 200);
+						}
+					}
+				}
+
 			}
 	}

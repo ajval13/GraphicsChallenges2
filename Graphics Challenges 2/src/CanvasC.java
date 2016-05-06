@@ -33,22 +33,32 @@ public class CanvasC extends Canvas
 			for(int pat=0 ; pat<1000; pat= pat+250)
 				{
 				graphics.setColor(Color.BLACK);
-				graphics.fillRect(pat, 0, 375, 125);
+				graphics.fillRect(pat, 250, 125, 125);
 				}
 			for(int pat=125 ; pat<1000; pat= pat+250)
 				{
 				graphics.setColor(Color.BLACK);
-				graphics.fillRect(pat, 500, 125, 125);
+				graphics.fillRect(pat, 375, 125, 125);
 				}
 			for(int pat=0 ; pat<1000; pat= pat+250)
 				{
 				graphics.setColor(Color.BLACK);
-				graphics.fillRect(pat, 0, 125, 125);
+				graphics.fillRect(pat, 500, 125, 125);
 				}
 			for(int pat=125 ; pat<1000; pat= pat+250)
 				{
 				graphics.setColor(Color.BLACK);
-				graphics.fillRect(pat, 125, 125, 125);
+				graphics.fillRect(pat, 625, 125, 125);
+				}
+			for(int pat=0 ; pat<1000; pat= pat+250)
+				{
+				graphics.setColor(Color.BLACK);
+				graphics.fillRect(pat, 750, 125, 125);
+				}
+			for(int pat=125 ; pat<1000; pat= pat+250)
+				{
+				graphics.setColor(Color.BLACK);
+				graphics.fillRect(pat, 875, 125, 125);
 				}
 			}
 	}
